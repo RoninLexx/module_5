@@ -5,7 +5,7 @@ class House:
 
         def go_to(self, new_floor):
             if int(new_floor) > self.number_of_floors or new_floor < 1:
-                print('"Такого этажа не существует"')
+                print('"Такого этажа не существует"') # Не понятно зачем на вывод нужны кавычки, но если в задании указаны - вот они.
             else:
                 for floor in range(1, new_floor + 1):
                     print(floor)
