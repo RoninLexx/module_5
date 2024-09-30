@@ -38,23 +38,25 @@ class House:
 
 
     def __ne__(self, other):
-       return self.number_of_floors != other.number_of_floors
+        return self.number_of_floors != other.number_of_floors
 
 
     def __add__(self, value):
-        new_number_of_floors = self.number_of_floors + value
-        return f"Название: {self.name}, кол-во этажей: {new_number_of_floors}"
+        return House(self.name, self.number_of_floors + value)
 
-    def __iadd__(self, other):
-        return self.__add__(other)
+    def __iadd__(self, value):
+        if isinstance(value, int):
+            return self.__add__(value)
 
 
-    def __radd__(self, other):
-        return self.__add__(other)
+    def __radd__(self, value):
+        if isinstance(value, int):
+            return self.__add__(value)
 
 
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
+
 
 
 print(h1)
