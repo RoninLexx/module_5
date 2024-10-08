@@ -13,10 +13,8 @@ class House:
     def __len__(self):
         return self.number_of_floors
 
-
     def __str__(self):
         return f"Название: {self.name}, кол-во этажей: {self.number_of_floors}"
-
 
     def __eq__(self, other):
         if isinstance(other, House):
@@ -24,24 +22,17 @@ class House:
         elif isinstance(other, int):
             return self.number_of_floors == other
 
-
-
     def __lt__(self, other):
         return self.number_of_floors < other.number_of_floors
 
     def __le__(self, other):
         return self.__eq__(other) or self.__lt__(other)
 
-
-
     def __gt__(self, other):
         return not self.__le__(other)
 
-
     def __ge__(self, other):
         return not self.__lt__(other)
-
-
 
     def __ne__(self, other):
         return not self.__eq__(other)
@@ -57,7 +48,6 @@ class House:
         if isinstance(value, int):
             return self.__add__(value)
 
-
     def __radd__(self, value):
         if isinstance(value, int):
             return self.__add__(value)
@@ -65,8 +55,6 @@ class House:
 
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
-
-
 
 print(h1)
 print(h2)
