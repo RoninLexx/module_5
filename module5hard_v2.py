@@ -44,7 +44,12 @@ class UrTube:
 
     def get_videos(self, title):
         search_title = title.lower()
-        return [video.title for video in self.videos if search_title in video.title.lower()]
+        all_v_that_found = []
+        for video in self.videos:
+            if search_title in video.title.lower():
+                all_v_that_found.append(video.title)
+        return all_v_that_found
+
 
 
     def watch_video(self, title):
