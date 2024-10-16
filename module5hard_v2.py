@@ -61,7 +61,7 @@ class UrTube:
                 while video.time_now < video.duration:
                     watched_seconds.append(str(video.time_now))
                     video.time_now += 1
-                    # time.sleep(1) # закомментируйте, чтобы не ждать
+                    # time.sleep(1) # закомментировал, чтобы не ждать
                 print(*watched_seconds, 'Конец видео')
                 video.time_now = 0
                 return
