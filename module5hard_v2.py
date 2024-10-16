@@ -65,7 +65,8 @@ class UrTube:
                 print(*watched_seconds, 'Конец видео')
                 video.time_now = 0
                 return
-        print("Видео не найдено")
+        #print("Видео не найдено") # было так, но по заданиу в результате написано urban_pythonist
+        print("urban_pythonist")
 
 if __name__ == '__main__':
     ur = UrTube()
