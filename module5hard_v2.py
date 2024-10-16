@@ -90,6 +90,7 @@ if __name__ == '__main__':
 
     # Проверка входа в другой аккаунт
     ur.register('vasya_pupkin', 'F8098FM8fjm9jmi', 55)
+    # print(ur.current_user) # выводит <main.User object at 0x000002CBD33BC920> - в задании такого нет
 
     # Попытка воспроизведения несуществующего видео
     ur.watch_video('Лучший язык программирования 2024 года!')
